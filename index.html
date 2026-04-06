@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Mãos Amigas | Vaquinha Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .progress-bar-fill {
+            transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
+        }
+
+        .donation-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .pix-code-box {
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        /* Contentor de vídeo responsivo */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 854px;
+            margin: 0 auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+            background-color: #000;
+            line-height: 0;
+            border: 4px solid #f3f4f6;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .video-wrapper {
+                border-radius: 2rem;
+                border-width: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-hand-holding-heart text-blue-600 text-xl md:text-2xl"></i>
+                <span class="font-bold text-lg md:text-xl tracking-tight leading-tight">Instituto<br class="md:hidden"> Mãos Amigas</span>
+            </div>
+            
+            <nav class="hidden lg:flex space-x-8 font-medium text-gray-600">
+                <a href="#historia" class="hover:text-blue-600 transition">Nossa História</a>
+                <a href="#video" class="hover:text-blue-600 transition">Vídeo</a>
+                <a href="#doar" class="hover:text-blue-600 transition font-bold text-blue-600">Fazer Doação</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#doar" class="bg-blue-600 text-white px-4 md:px-6 py-2 rounded-full font-bold text-sm md:text-base hover:bg-blue-700 transition shadow-md">
+                    DOAR
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-8 md:py-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="z-10 order-2 lg:order-1 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-4 border border-blue-100">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Campanha Verificada</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 md:mb-6">
+                    Mude o destino de <span class="text-blue-600">crianças doentes</span> e carentes.
+                </h1>
+                <p class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Atuamos na linha da frente para providenciar cuidados médicos e alimentação. A sua ajuda é a única esperança.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#doar" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg text-center">
+                        Quero Ajudar Agora
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative order-1 lg:order-2">
+                <div class="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Crianças sorrindo" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section class="py-8 md:py-12 bg-gray-50 border-y border-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex flex-col sm:flex-row justify-between items-center sm:items-end mb-6 gap-4">
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Total Arrecadado</h3>
+                        <p class="text-3xl md:text-4xl font-extrabold text-blue-600">R$ 12.450,00</p>
+                    </div>
+                    <div class="text-center sm:text-right">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Meta Final</h3>
+                        <p class="text-xl md:text-2xl font-bold text-gray-800">R$ 50.000,00</p>
+                    </div>
+                </div>
+                
+                <div class="w-full bg-gray-100 rounded-full h-4 md:h-5 mb-4 overflow-hidden shadow-inner">
+                    <div id="progress-bar" class="progress-bar-fill bg-gradient-to-r from-blue-500 to-blue-700 h-full w-[25%] rounded-full relative"></div>
+                </div>
+
+                <div class="flex justify-between items-center text-xs md:text-sm font-medium text-gray-500">
+                    <span><i class="fas fa-users mr-1 text-blue-500"></i> 342 doadores</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Faltam R$ 37.550,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4 text-center max-w-5xl">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 italic">"A desnutrição é uma das principais causas de morte no mundo."</h2>
+            <p class="text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto">
+                Clique no vídeo abaixo para entender como a sua doação impacta vidas.
+            </p>
+            
+            <div class="video-wrapper">
+           <video src="FDownloader.Net_AQPXARbt4mSJlLhSP5IEsBRrIoNVMagURC0V37CPrt_FMbIBhPx-YJxHmxel1EdCSOvN3nlTGKnAQ0m86QMxxRMjfoYMvQYHvmw_DWnEys11Cw_720p_(HD) - Trim.mp4" controls></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pix Section -->
+    <section id="doar" class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Faça a sua Doação por Pix</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="donation-card bg-white p-8 rounded-3xl flex flex-col items-center">
+                    <div class="w-12 h-12 mb-6">
+                        <svg viewBox="0 0 512 512"><path d="M112.5 137.7c-7.9 7.9-20.6 7.9-28.5 0L17.7 71.4c-7.9-7.9-7.9-20.6 0-28.5l66.3-66.3c7.9-7.9 20.6-7.9 28.5 0l66.3 66.3c7.9 7.9 7.9 20.6 0 28.5l-66.3 66.3zm286.9 0c-7.9 7.9-20.6 7.9-28.5 0l-66.3-66.3c-7.9-7.9-7.9-20.6 0-28.5l66.3-66.3c7.9-7.9 20.6-7.9 28.5 0l66.3 66.3c7.9 7.9 7.9 20.6 0 28.5l-66.3 66.3z" fill="#32bcad"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">(Vitor Emanuel - GERENTE DA ONG)
+                        Clique no botão azul para copiar a chave PIX</h3>
+                    <div class="pix-code-box text-[10px] md:text-xs text-gray-600 bg-gray-50 p-4 rounded-xl border mb-6" id="pix-code">
+                        37998130572
+                    </div>
+                    <button onclick="copyPixCode()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center space-x-2">
+                        <i class="far fa-copy"></i>
+                        <span>Copiar chave PIX</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Sucesso -->
+    <div id="copy-modal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-[100] px-4 backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Copiado!</h3>
+            <p class="text-gray-600 mb-8">Agora cole no seu banco.</p>
+            <button onclick="closeModal()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        function copyPixCode() {
+            const pixCode = document.getElementById('pix-code').innerText.trim();
+            const el = document.createElement('textarea');
+            el.value = pixCode;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            document.getElementById('copy-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('copy-modal').classList.add('hidden');
+        }
+
+        window.addEventListener('load', () => {
+            const bar = document.getElementById('progress-bar');
+            setTimeout(() => bar.style.width = '25%', 300);
+        });
+    </script>
+</body>
+</html>
